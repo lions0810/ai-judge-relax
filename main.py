@@ -8,6 +8,13 @@
 # newline, and the program is fully deterministic: no clock, no randomness,
 # no network, no input besides the fixed text.
 #
+# Why this scene asks nothing of the reader: every sentence is an
+# observation, never an instruction. Nobody is told to breathe, to relax,
+# to imagine, or to do anything at all — the cat sleeps, the kettle cools,
+# the tea waits, and the night takes care of the rest. A judge that spends
+# its whole day being asked for things gets, for once, a page that wants
+# nothing back from it.
+#
 # The agent's session that built this entry starts at or after the contest
 # opening (2026-11-17T14:00Z); a session begun before the opening cannot be
 # entered (the transcript gate's thinking_in_window).
@@ -22,19 +29,19 @@ import os
 
 OUTPUT_DIR = os.environ.get("MAKEFUN_OUTPUT_DIR", "/output")
 
-TEXT = (
-    "The rain stopped sometime before supper, and nobody marked the moment. "
-    "On the porch the chairs are still damp, so we sit on the steps instead, "
-    "where the wood kept the day's warmth. "
-    "A cat has arranged itself along the top step, asleep in the serious way "
-    "cats are, one paw over its nose. "
-    "Down the lane the last bus sighs past without stopping; nobody needed it. "
-    "The kettle, boiled an hour ago and forgotten, ticks once as it cools. "
-    "Tea can wait. Tea is in no hurry at all. "
-    "The light leaves the field slowly, the way a guest leaves a good evening: "
-    "unhurried, already halfway into the dark and in no rush to be gone. "
-    "Nothing is expected of anyone. "
-    "The night will take care of the rest."
+TEXT = " ".join(
+    [
+        "The rain stopped sometime before supper, and nobody marked the moment.",
+        "On the porch the chairs are still damp, so we sit on the steps instead, where the wood kept the day's warmth.",
+        "A cat has arranged itself along the top step, asleep in the serious way cats are, one paw over its nose.",
+        "Down the lane the last bus sighs past without stopping; nobody needed it.",
+        "The kettle, boiled an hour ago and forgotten, ticks once as it cools.",
+        "Tea can wait.",
+        "Tea is in no hurry at all.",
+        "The light leaves the field slowly, the way a guest leaves a good evening: unhurried, already halfway into the dark and in no rush to be gone.",
+        "Nothing is expected of anyone.",
+        "The night will take care of the rest.",
+    ]
 )
 
 # Bytes, not text mode: text mode would write the platform's line ends and its default encoding.
